@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		75A8032528CB51F900E1CA28 /* EdvoraiOSTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A8032428CB51F900E1CA28 /* EdvoraiOSTestApp.swift */; };
-		75A8032728CB51F900E1CA28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A8032628CB51F900E1CA28 /* ContentView.swift */; };
+		75A8032728CB51F900E1CA28 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A8032628CB51F900E1CA28 /* MainView.swift */; };
 		75A8032928CB51FA00E1CA28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A8032828CB51FA00E1CA28 /* Assets.xcassets */; };
 		75A8032C28CB51FA00E1CA28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A8032B28CB51FA00E1CA28 /* Preview Assets.xcassets */; };
 		75A8035328CB72BB00E1CA28 /* ImagePickerView in Frameworks */ = {isa = PBXBuildFile; productRef = 75A8035228CB72BB00E1CA28 /* ImagePickerView */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		75A8032128CB51F900E1CA28 /* EdvoraiOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdvoraiOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A8032428CB51F900E1CA28 /* EdvoraiOSTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdvoraiOSTestApp.swift; sourceTree = "<group>"; };
-		75A8032628CB51F900E1CA28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		75A8032628CB51F900E1CA28 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		75A8032828CB51FA00E1CA28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75A8032B28CB51FA00E1CA28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,7 +57,6 @@
 				75A8033528CB529D00E1CA28 /* ViewModel */,
 				75A8033428CB528100E1CA28 /* Model */,
 				75A8032428CB51F900E1CA28 /* EdvoraiOSTestApp.swift */,
-				75A8032628CB51F900E1CA28 /* ContentView.swift */,
 				75A8032828CB51FA00E1CA28 /* Assets.xcassets */,
 				75A8032A28CB51FA00E1CA28 /* Preview Content */,
 			);
@@ -89,6 +88,7 @@
 		75A8033628CB52B500E1CA28 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				75A8032628CB51F900E1CA28 /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75A8032728CB51F900E1CA28 /* ContentView.swift in Sources */,
+				75A8032728CB51F900E1CA28 /* MainView.swift in Sources */,
 				75A8032528CB51F900E1CA28 /* EdvoraiOSTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
