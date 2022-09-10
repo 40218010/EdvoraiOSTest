@@ -45,7 +45,7 @@ struct OrderDetailView: View {
                         }
                         
                     }
-                    .foregroundColor(Color("Fog"))
+                    .foregroundColor(Color("MistBlue"))
                     .padding()
                     .background(
                         Color("GrayBrown").cornerRadius(15)
