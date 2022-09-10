@@ -10,8 +10,11 @@ import ImagePickerView
 
 
 struct MainView: View {
-    @State var showImagePicker: Bool = false
+    
     @State var image: UIImage?
+    
+    @State var activeSheet: ActiveSheet?
+
     
     var body: some View {
         ZStack {
@@ -24,7 +27,7 @@ struct MainView: View {
                         Spacer()
                         
                         Button {
-                            showImagePicker.toggle()
+                            activeSheet = .third
                             
                         } label: {
                             if image != nil {
@@ -54,59 +57,90 @@ struct MainView: View {
                 ScrollView {
                     VStack(spacing: 20.0) {
                         
-                        
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                .fill(Color("MistBlue"))
-                            .frame(width: .infinity, height: 200)
-                            
-                            VStack {
-                                Image(systemName: "hare.fill")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 40)
+                        Button {
+                            activeSheet = .first
+                        } label: {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 25, style: .continuous)
+                                    .fill(Color("MistBlue"))
+                                    .frame(height: 200)
+                                    .frame(minWidth: 0,
+                                           maxWidth: .infinity)
                                 
-                                Text("Order".uppercased())
-                                    .fontWeight(.light)
-                                    .font(.system(size: 20))
-                            }
-
-                        }
-                        
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                .fill(Color("Tea"))
-                            .frame(width: .infinity, height: 200)
-                            
-                            VStack {
-                                Image(systemName: "tortoise.fill")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 45)
+                                VStack {
+                                    Image(systemName: "hare.fill")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 40)
+                                    
+                                    Text("Order".uppercased())
+                                        .fontWeight(.light)
+                                        .font(.system(size: 20))
+                                }
+                                .foregroundColor(.black)
                                 
-                                Text("User".uppercased())
-                                    .fontWeight(.light)
-                                    .font(.system(size: 20))
                             }
-
                         }
+
+                        
+                        
+                        Button {
+                            activeSheet = .second
+                        } label: {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 25, style: .continuous)
+                                    .fill(Color("Tea"))
+                                    .frame(height: 200)
+                                    .frame(minWidth: 0,
+                                           maxWidth: .infinity)
+                                
+                                VStack {
+                                    Image(systemName: "tortoise.fill")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 45)
+                                    
+                                    Text("User".uppercased())
+                                        .fontWeight(.light)
+                                        .font(.system(size: 20))
+                                }
+                                .foregroundColor(.black)
+                                
+                            }
+                        }
+
+                        
+
                     }
                     .padding()
                 }
                 
                 
-                
-                
-                
             }
-            .sheet(isPresented: $showImagePicker) {
-                ImagePickerView(sourceType: .photoLibrary) { image in
-                    self.image = image
+            
+            .sheet(item: $activeSheet) { item in
+                switch item {
+                case .first:
+                    OrderDetailView()
+                case .second:
+                    UserDetailView()
+                case .third:
+                    ImagePickerView(sourceType: .photoLibrary) { image in
+                        self.image = image
+                    }
                 }
             }
             
         }
         
+    }
+}
+
+enum ActiveSheet: Identifiable {
+    case first, second, third
+    
+    var id: Int {
+        hashValue
     }
 }
 
