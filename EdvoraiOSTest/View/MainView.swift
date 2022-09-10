@@ -12,9 +12,8 @@ import ImagePickerView
 struct MainView: View {
     
     @State var image: UIImage?
-    
     @State var activeSheet: ActiveSheet?
-
+    
     
     var body: some View {
         ZStack {
@@ -23,33 +22,8 @@ struct MainView: View {
             VStack {
                 VStack {
                     
-                    HStack {
-                        Spacer()
-                        
-                        Button {
-                            activeSheet = .third
-                            
-                        } label: {
-                            if image != nil {
-                                Image(uiImage: image!)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 50, height: 50)
-                                    .clipped()
-                                    .cornerRadius(100)
-                            } else {
-                                Image(systemName: "person.circle.fill")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 50, height: 50)
-                                    .foregroundColor(Color("RosyPink"))
-                                
-                            }
-                            
-                            
-                        }
-                    }
-                    .padding()
+                    ProfileButtonView(image: $image,
+                                      activeSheet: $activeSheet)
                     
                 }
                 
@@ -81,7 +55,7 @@ struct MainView: View {
                                 
                             }
                         }
-
+                        
                         
                         
                         Button {
@@ -108,9 +82,9 @@ struct MainView: View {
                                 
                             }
                         }
-
                         
-
+                        
+                        
                     }
                     .padding()
                 }
@@ -147,5 +121,41 @@ enum ActiveSheet: Identifiable {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+    }
+}
+
+//MARK: - ProfileButtonView
+struct ProfileButtonView: View {
+    @Binding var image: UIImage?
+    @Binding var activeSheet: ActiveSheet?
+    
+    var body: some View {
+        HStack {
+            Spacer()
+            
+            Button {
+                activeSheet = .third
+                
+            } label: {
+                if image != nil {
+                    Image(uiImage: image!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 50, height: 50)
+                        .clipped()
+                        .cornerRadius(100)
+                } else {
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(Color("RosyPink"))
+                    
+                }
+                
+                
+            }
+        }
+        .padding()
     }
 }
