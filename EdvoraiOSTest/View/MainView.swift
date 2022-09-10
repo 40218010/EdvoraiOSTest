@@ -26,6 +26,7 @@ struct MainView: View {
                         
                         Button {
                             showImagePicker.toggle()
+                            
                         } label: {
                             if image != nil {
                                 Image(uiImage: image!)
@@ -51,18 +52,19 @@ struct MainView: View {
                 }
                 Spacer()
                 
-                .sheet(isPresented: $showImagePicker) {
-                    ImagePickerView(sourceType: .photoLibrary) { image in
-                        self.image = image
-                    }
+
             }
+            .sheet(isPresented: $showImagePicker) {
+                ImagePickerView(sourceType: .photoLibrary) { image in
+                    self.image = image
+                }
             }
         }
 
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
     }
