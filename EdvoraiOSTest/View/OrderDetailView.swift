@@ -5,7 +5,6 @@
 //  Created by 林大屍 on 2022/9/9.
 //
 
-import Foundation
 import SwiftUI
 
 
@@ -31,17 +30,17 @@ struct OrderDetailView: View {
                         
                         
                         HStack {
-                            Text("order id:")
+                            Text("Order id:")
                             Text("\(order.orderID)")
                         }
                         
                         HStack {
-                            Text("product id:")
+                            Text("Product id:")
                             Text("\(order.productID)")
                         }
                         
                         HStack {
-                            Text("user id:")
+                            Text("User id:")
                             Text("\(order.userID)")
                         }
                         

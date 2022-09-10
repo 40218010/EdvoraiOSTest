@@ -19,7 +19,7 @@ struct MainView: View {
             
             VStack {
                 VStack{
-  
+                    
                     
                     HStack {
                         Spacer()
@@ -41,18 +41,18 @@ struct MainView: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 50, height: 50)
                                     .foregroundColor(Color("GrayBrown"))
-
+                                
                             }
-
                             
-                    }
+                            
+                        }
                     }
                     .padding()
-
+                    
                 }
                 Spacer()
                 
-
+                
             }
             .sheet(isPresented: $showImagePicker) {
                 ImagePickerView(sourceType: .photoLibrary) { image in
@@ -60,7 +60,7 @@ struct MainView: View {
                 }
             }
         }
-
+        
     }
 }
 

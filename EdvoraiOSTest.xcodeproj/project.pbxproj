@@ -16,6 +16,7 @@
 		75A8035728CBA9DD00E1CA28 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A8035628CBA9DD00E1CA28 /* Network.swift */; };
 		75A8035928CCFB1E00E1CA28 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A8035828CCFB1E00E1CA28 /* OrderModel.swift */; };
 		75A8035B28CCFB3200E1CA28 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A8035A28CCFB3200E1CA28 /* UserModel.swift */; };
+		75B06A5928CD100F006644F9 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B06A5828CD100F006644F9 /* UserDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		75A8035628CBA9DD00E1CA28 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		75A8035828CCFB1E00E1CA28 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		75A8035A28CCFB3200E1CA28 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		75B06A5828CD100F006644F9 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				75A8032628CB51F900E1CA28 /* MainView.swift */,
 				75A8035428CB999900E1CA28 /* OrderDetailView.swift */,
+				75B06A5828CD100F006644F9 /* UserDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				75A8035528CB999900E1CA28 /* OrderDetailView.swift in Sources */,
 				75A8035928CCFB1E00E1CA28 /* OrderModel.swift in Sources */,
 				75A8035728CBA9DD00E1CA28 /* Network.swift in Sources */,
+				75B06A5928CD100F006644F9 /* UserDetailView.swift in Sources */,
 				75A8035B28CCFB3200E1CA28 /* UserModel.swift in Sources */,
 				75A8032528CB51F900E1CA28 /* EdvoraiOSTestApp.swift in Sources */,
 			);

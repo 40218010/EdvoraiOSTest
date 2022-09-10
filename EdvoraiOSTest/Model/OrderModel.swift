@@ -11,7 +11,7 @@ struct Order: Decodable, Identifiable {
     let id = UUID()
     let orderID, productID, quantity, userID: Int
     let orderDate: String
-
+    
     enum CodingKeys: String, CodingKey {
         case orderID = "order_id"
         case productID = "product_id"
@@ -29,6 +29,6 @@ struct Order: Decodable, Identifiable {
         return dateFormatter.string(from: date as Date)
     }
     
-
+    
     
 }
