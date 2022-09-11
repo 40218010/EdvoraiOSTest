@@ -13,17 +13,16 @@ A simple app build with SwiftUI.
 
 ## Screenshots
 
-![image1](picture or gif url)
-![image2](picture or gif url)
-![image3](picture or gif url)
+![image1](https://github.com/40218010/EdvoraiOSTest/blob/main/images/SimulatorScreen%20Shot-1.png)
+![image2](https://github.com/40218010/EdvoraiOSTest/blob/main/images/SimulatorScreen%20Shot-2.png)
+![image3](https://github.com/40218010/EdvoraiOSTest/blob/main/images/SimulatorScreen%20Shot-3.png)
 
 
 
 ## Demo
 
-Insert gif or link to demo
 
-
+![gif](https://github.com/40218010/EdvoraiOSTest/blob/main/images/SimulatorScreen%20Shot-3.png)
 ## Authors
 
 This app was made by me, Ya-hsuan Lin(Erin).
