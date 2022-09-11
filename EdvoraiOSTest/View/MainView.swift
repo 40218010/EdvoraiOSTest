@@ -34,26 +34,9 @@ struct MainView: View {
                         Button {
                             activeSheet = .first
                         } label: {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                    .fill(Color("MistBlue"))
-                                    .frame(height: 200)
-                                    .frame(minWidth: 0,
-                                           maxWidth: .infinity)
-                                
-                                VStack {
-                                    Image(systemName: "hare.fill")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 40)
-                                    
-                                    Text("Order".uppercased())
-                                        .fontWeight(.light)
-                                        .font(.system(size: 20))
-                                }
-                                .foregroundColor(.black)
-                                
-                            }
+                            RectangleCardView(bgColor: "MistBlue",
+                                              iconName: "hare.fill",
+                                              title: "order")
                         }
                         
                         
@@ -61,29 +44,10 @@ struct MainView: View {
                         Button {
                             activeSheet = .second
                         } label: {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                    .fill(Color("Tea"))
-                                    .frame(height: 200)
-                                    .frame(minWidth: 0,
-                                           maxWidth: .infinity)
-                                
-                                VStack {
-                                    Image(systemName: "tortoise.fill")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 45)
-                                    
-                                    Text("User".uppercased())
-                                        .fontWeight(.light)
-                                        .font(.system(size: 20))
-                                }
-                                .foregroundColor(.black)
-                                
-                            }
+                            RectangleCardView(bgColor: "Tea",
+                                              iconName: "tortoise.fill",
+                                              title: "user")
                         }
-                        
-                        
                         
                     }
                     .padding()
@@ -153,9 +117,38 @@ struct ProfileButtonView: View {
                     
                 }
                 
-                
             }
         }
         .padding()
+    }
+}
+
+//MARK: - RectangleCardView
+struct RectangleCardView: View {
+    var bgColor: String
+    var iconName: String
+    var title: String
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 25, style: .continuous)
+                .fill(Color(bgColor))
+                .frame(height: 200)
+                .frame(minWidth: 0,
+                       maxWidth: .infinity)
+            
+            VStack {
+                Image(systemName: iconName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 45)
+                
+                Text(title.uppercased())
+                    .fontWeight(.light)
+                    .font(.system(size: 20))
+            }
+            .foregroundColor(.black)
+            
+        }
     }
 }
