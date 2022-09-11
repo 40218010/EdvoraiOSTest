@@ -22,7 +22,7 @@ A simple app build with SwiftUI.
 
 <img src="https://github.com/40218010/EdvoraiOSTest/blob/main/images/ImagePicker.gif"  width="220" >
 
-## Authors
+## Contact
 
-This app was made by me, Ya-hsuan Lin(Erin).
-My Linkedin:
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/亞萱-林-47404315b)
+
