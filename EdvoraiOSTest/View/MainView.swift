@@ -17,7 +17,7 @@ struct MainView: View {
     
     var body: some View {
         ZStack {
-            Color("GrayBrown")
+            Color("GrayBrown").ignoresSafeArea()
             
             VStack {
                 VStack {

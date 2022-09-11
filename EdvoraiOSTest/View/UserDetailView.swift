@@ -13,35 +13,39 @@ struct UserDetailView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                ForEach(network.users) { user in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text("User id:")
-                                Text("\(user.userID)")
+            ZStack {
+                Color("RosyPink").ignoresSafeArea()
+                
+                ScrollView {
+                    ForEach(network.users) { user in
+                        HStack {
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    Text("User id:")
+                                    Text("\(user.userID)")
+                                }
+                                
+                                HStack {
+                                    Text("Name:")
+                                    Text(user.name)
+                                }
                             }
                             
-                            HStack {
-                                Text("Name:")
-                                Text(user.name)
-                            }
+                            Spacer()
+                            
                         }
-                        
-                        Spacer()
-                        
+                        .foregroundColor(Color("RosyPink"))
+                        .padding()
+                        .background(
+                            Color("SageGreen").cornerRadius(15)
+                        )
+                        .padding(.horizontal)
                     }
-                    .foregroundColor(Color("RosyPink"))
-                    .padding()
-                    .background(
-                        Color("SageGreen").cornerRadius(15)
-                    )
-                    .padding(.horizontal)
+                    .onAppear{
+                        network.getUser()
+                    }
+                    .navigationTitle("Users")
                 }
-                .onAppear{
-                    network.getUser()
-                }
-                .navigationTitle("Users")
             }
         }
         

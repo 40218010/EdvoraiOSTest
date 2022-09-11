@@ -15,47 +15,51 @@ struct OrderDetailView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                ForEach(network.orders) { order in
-                    VStack(alignment: .leading) {
-                        
-                        HStack {
-                            Spacer()
-                            Text(order.orderTime)
-                                .font(.title3)
-                                .fontWeight(.light)
-                            Spacer()
+            ZStack {
+                Color("MistBlue").ignoresSafeArea()
+                
+                ScrollView {
+                    ForEach(network.orders) { order in
+                        VStack(alignment: .leading) {
+                            
+                            HStack {
+                                Spacer()
+                                Text(order.orderTime)
+                                    .font(.title3)
+                                    .fontWeight(.light)
+                                Spacer()
+                                
+                            }
+                            
+                            
+                            HStack {
+                                Text("Order id:")
+                                Text("\(order.orderID)")
+                            }
+                            
+                            HStack {
+                                Text("Product id:")
+                                Text("\(order.productID)")
+                            }
+                            
+                            HStack {
+                                Text("User id:")
+                                Text("\(order.userID)")
+                            }
                             
                         }
-                        
-                        
-                        HStack {
-                            Text("Order id:")
-                            Text("\(order.orderID)")
-                        }
-                        
-                        HStack {
-                            Text("Product id:")
-                            Text("\(order.productID)")
-                        }
-                        
-                        HStack {
-                            Text("User id:")
-                            Text("\(order.userID)")
-                        }
-                        
+                        .foregroundColor(Color("MistBlue"))
+                        .padding()
+                        .background(
+                            Color("GrayBrown").cornerRadius(15)
+                        )
+                        .padding(.horizontal)
                     }
-                    .foregroundColor(Color("MistBlue"))
-                    .padding()
-                    .background(
-                        Color("GrayBrown").cornerRadius(15)
-                    )
-                    .padding(.horizontal)
+                    .onAppear{
+                        network.getOrder()
+                    }
+                    .navigationTitle("Orders")
                 }
-                .onAppear{
-                    network.getOrder()
-                }
-                .navigationTitle("Orders")
             }
         }
         
