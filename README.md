@@ -20,6 +20,7 @@ A simple app build with SwiftUI.
 
 ## Demo
 
+<img src="https://github.com/40218010/EdvoraiOSTest/blob/main/images/SimulatorScreen%20Recording.mp4"  width="220" >
 
 ![gif](https://github.com/40218010/EdvoraiOSTest/blob/main/images/SimulatorScreen%20Recording.mp4)
 ## Authors
