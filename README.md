@@ -3,12 +3,12 @@
 
 A simple app build with SwiftUI.
 
-## Features
+## Keyword
 
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
+- SwiftUI
+- MVVM
+- JSON & Decodable & URLSession
+- Image Picker
 
 
 ## Screenshots
@@ -22,7 +22,6 @@ A simple app build with SwiftUI.
 
 <img src="https://github.com/40218010/EdvoraiOSTest/blob/main/images/ImagePicker.gif"  width="220" >
 
-![gif](https://github.com/40218010/EdvoraiOSTest/blob/main/images/SimulatorScreen%20Recording.mp4)
 ## Authors
 
 This app was made by me, Ya-hsuan Lin(Erin).
