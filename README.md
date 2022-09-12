@@ -24,5 +24,5 @@ A simple app build with SwiftUI.
 
 ## Contact
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/亞萱-林-47404315b)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hsuanTW-47404315b)
 
